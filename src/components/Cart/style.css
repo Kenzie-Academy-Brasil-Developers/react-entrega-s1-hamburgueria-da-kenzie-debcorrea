@@ -1,0 +1,38 @@
+.cart {
+  width: 290px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.cartTitle {
+  width: 100%;
+  height: 65px;
+
+  background-color: #27ae60;
+
+  border-radius: 5px 5px 0px 0px;
+
+  display: flex;
+  align-items: center;
+}
+
+.cartTitle > h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+
+  padding: 0 0 0 1.3rem;
+}
+
+@media (min-width: 375px) {
+  .cart {
+    width: 330px;
+  }
+}
+
+@media (min-width: 425px) {
+  .cart {
+    width: 382px;
+  }
+}
