@@ -1,8 +1,16 @@
 import "./style.css";
+import { toast } from "react-toastify";
 
 export function Product({ product, currentSale, setCurrentSale }) {
   const checkCart = (product) => {
-    return currentSale?.find((cartProduct) => product.id === cartProduct.id);
+    // return currentSale?.find((cartProduct) => product.id === cartProduct.id);
+
+    if (!currentSale?.find((item) => item === product)) {
+      setCurrentSale([...currentSale, product]);
+      toast.success("Produto adicionado ao carrinho");
+    } else {
+      toast.error("Produto já existe no carrinho");
+    }
   };
 
   return (
@@ -23,13 +31,7 @@ export function Product({ product, currentSale, setCurrentSale }) {
           })}
         </p>
 
-        <button
-          onClick={() =>
-            !checkCart(product) ? setCurrentSale([...currentSale, product]) : ""
-          }
-        >
-          Adicionar
-        </button>
+        <button onClick={() => checkCart(product)}>Adicionar</button>
       </div>
     </li>
   );

@@ -1,10 +1,12 @@
 import { CartTotal } from "../CartTotal";
+import { toast } from "react-toastify";
 import "./style.css";
 
 export function CartProduct({ currentSale, setCurrentSale }) {
   const removeFromCart = (productId) => {
     const newCart = currentSale.filter((product) => product.id !== productId);
     setCurrentSale(newCart);
+    toast.success("Produto removido do carrinho");
   };
 
   return (
