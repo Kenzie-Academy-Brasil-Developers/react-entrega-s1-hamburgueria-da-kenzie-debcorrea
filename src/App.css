@@ -27,12 +27,18 @@ button {
 @media (min-width: 1024px) {
   .containerMain {
     flex-direction: row;
-    gap: 11rem;
+    gap: 7rem;
 
     margin: 0 80px;
   }
 
   .containerMain > aside {
     align-self: flex-start;
+  }
+}
+
+@media (min-width: 1440px) {
+  .containerMain {
+    gap: 12.5rem;
   }
 }

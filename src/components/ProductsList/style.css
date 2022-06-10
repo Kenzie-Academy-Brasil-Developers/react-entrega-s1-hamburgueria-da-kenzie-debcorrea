@@ -16,10 +16,24 @@
 
 @media (min-width: 1024px) {
   .list {
+    min-width: 370px;
+
     flex-wrap: wrap;
 
     overflow: auto;
 
     padding: 0;
+  }
+}
+
+@media (min-width: 1366px) {
+  .list {
+    min-width: 700px;
+  }
+}
+
+@media (min-width: 2560px) {
+  .list {
+    min-width: 1818px;
   }
 }
